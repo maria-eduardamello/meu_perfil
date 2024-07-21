@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
+
+:root{
+    --azul:#22D4FD;
+    --preto:#000000;
+    --branco: #f6f6f6;
+
+    --krona:"Krona One", sans-serif;
+    --mont:"Montserrat", sans-serif;
+
+}
+
+body{
+    background-color: var(--preto);
+    color: var(--branco);
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+strong {
+    color: var(--azul);
+}
+
+.apresentacao{
+    display: flex; /* deixa um elemento ao lado do outro */
+    align-items: center;
+    padding: 5% 15%; /* o primeiro valor é o espaço superior e inferior e o segundo valor é para as laterais */
+    justify-content: space-between;
+    gap: 82px; /* mantém o espaço entre o texto e a imagem*/
+
+}
+
+.apresentacao_conteudo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.titulo{
+    font-size: 2.25rem;
+    font-family: var(--krona);
+}
+
+.paragrafo{
+    font-size: 1.25rem;
+    font-family: var(--mont);
+
+}
+
+.botoes{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.botao{
+    display: flex; 
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--azul);
+    width: 50%;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding: 21px;
+    text-decoration: none;
+    color: var(--branco);
+    font-family: var(--mont);
+    
+    
+}
+
+h2{
+    font-family: var(--krona);
+    font-weight: 400;
+    font-size: 1.25rem;
+}
+
+.botao:hover{
+    background-color: #272727;
+}
+
+.rodape{
+    background-color: var(--azul);
+    text-align: center;
+    font-family: var(--mont);
+    padding: 24px;
+    font-size: 1.25rem;
+}
+
+.cabecalho{
+    padding: 2% 0% 0% 15%;
+}
+
+.cabecalho_menu{
+    display: flex;
+    gap: 80px;
+
+}
+
+.sobre_mim_home{
+    font-family: var(--mont);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--azul);
+    text-decoration: none;
+}
+
+.minha_foto {
+    width: 50% ; /* largura*/
+}
+
+/* se o tamanho da tela for menor que 1200, aplica o que está nas chaves*/
+@media (max-width:1200px){
+    .apresentacao{ /* diz onde vai ser aplicada a condição*/
+
+        flex-direction: column-reverse;
+        /* o colum reverse inverte a ordem dos elementos*/
+
+        padding: 10%;
+        
+    }
+
+    .cabecalho{
+        padding: 5%; /* espaçamento entre a imagem e o topo da tela*/
+    }
+
+    .cabecalho_menu{
+        justify-content: center;
+         /* centraliza o home e o sobre mim*/
+    }
+    .apresentacao_conteudo{
+        width: auto;/* largura automática*/
+    }
+
+    .titulo{
+        text-align: center;
+    }
+
+    .minha_foto{
+        max-width: 100%;
+    height: auto;
+    }
+
+}
